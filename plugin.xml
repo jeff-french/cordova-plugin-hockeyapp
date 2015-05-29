@@ -2,13 +2,13 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="net.michaelgooden.cordova.hockeyappplugin"
+    id="com.moonswitch.cordova.hockeyappplugin"
     version="0.1.8">
     <name>Device</name>
     <description>HockeyApp Plugin</description>
     <license>Apache 2.0</license>
     <keywords>hockeyapp,crash reporting,update</keywords>
-    <repo>https://github.com/MichaelGooden/cordova-plugin-hockeyapp/tree/feature/parameters</repo>
+    <repo>https://github.com/jeff-french/cordova-plugin-hockeyapp/tree/feature/parameters</repo>
 
     <engines>
         <engine name="cordova" version=">=3.5.0" />
@@ -20,7 +20,7 @@
 
     <!-- android -->
     <platform name="android">
-        <preference name="HOCKEYAPP_APP_ID_FOR_ANDROID" />
+        <preference name="HOCKEYAPP_APP_ID_FOR_ANDROID" value="CHANGE_ME"/>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="HockeyAppPlugin" >
                 <param name="android-package" value="org.nypr.cordova.hockeyappplugin.HockeyAppPlugin"/>
@@ -45,12 +45,12 @@
         </config-file>
 
         <source-file src="src/android/HockeyAppPlugin.java" target-dir="src/org/nypr/cordova/hockeyappplugin/" />
-        <source-file src="src/android/HockeySDK-3.0.2.jar" target-dir="libs" />
+        <source-file src="src/android/HockeySDK-3.5.0.jar" target-dir="libs" />
     </platform>
 
     <!-- ios -->
     <platform name="ios">
-        <preference name="HOCKEYAPP_APP_ID_FOR_IOS" />
+        <preference name="HOCKEYAPP_APP_ID_FOR_IOS" value="CHANGE_ME"/>
         <config-file target="config.xml" parent="/*">
             <feature name="HockeyAppPlugin">
                 <param name="ios-package" value="HockeyAppPlugin" />
@@ -82,6 +82,5 @@
         <framework src="Security.framework" />
         <framework src="SystemConfiguration.framework" />
         <framework src="UIKit.framework" />
-        <framework src="QuickLook.framework" />
     </platform>
 </plugin>
